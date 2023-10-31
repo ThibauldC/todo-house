@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    {
+      "task_name": "Downstairs vacuuming",
+      "frequency_days": 1
+    },
+    {
+      "task_name": "Upstairs vacuuming",
+      "frequency_days": 3
+    }
+  ]
+}
