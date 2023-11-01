@@ -1,8 +1,10 @@
-from config import db_from_config
-from repository import get_tasks, create_task_table
+from service import db_from_config, get_tasks_to_do, update_tasks_done
 
 if __name__ == '__main__':
-    create_task_table()
-    db_from_config("conf/tasks.json")
-    print(get_tasks("tasks.db"))
+    # db_from_config("conf/tasks.json")
+    tasks_to_do = get_tasks_to_do("tasks.db")
+    print(tasks_to_do)
+    # create Telegram message and send to channel
+    update_tasks_done("tasks.db", tasks_to_do)
+
 
