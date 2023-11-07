@@ -21,6 +21,7 @@ def get_tasks_to_do(db_path: str) -> list[Task]:
     tasks_to_do = [
         task for task in tasks
         if (task.last_done + timedelta(days=task.frequency_days)).date() == datetime.today().date()
+           or (task.last_done + timedelta(days=task.frequency_days)).date() < datetime.today().date()
     ]
     return tasks_to_do
 

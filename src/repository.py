@@ -14,7 +14,7 @@ def get_tasks(db_path: str) -> list[Task]:
     return tasks
 
 
-def insert_tasks(db_path: str, tasks: list[tuple[str, int, None]]) -> None:
+def insert_tasks(db_path: str, tasks: list[tuple[str, int, datetime.date]]) -> None:
     with sqlite3.connect(db_path) as conn:
         with sqlite_cursor(conn) as cur:
             cur.executemany("INSERT INTO tasks VALUES(?, ?, ?)", tasks)
