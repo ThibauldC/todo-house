@@ -7,6 +7,22 @@
     {
       "task_name": "Upstairs vacuuming",
       "frequency_days": 3
+    },
+    {
+      "task_name": "Change bed sheets",
+      "frequency_days": 7
+    },
+    {
+      "task_name": "Clean windows",
+      "frequency_days": 30
+    },
+    {
+      "task_name": "Downstairs mopping",
+      "frequency_days": 5
+    },
+    {
+      "task_name": "Upstairs mopping",
+      "frequency_days": 7
     }
   ]
 }
