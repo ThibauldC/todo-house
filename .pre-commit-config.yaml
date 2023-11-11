@@ -10,4 +10,4 @@ repos:
     - id: conventional-pre-commit
 
 default_language_version:
-    python: python3.11
+    python: python3.10

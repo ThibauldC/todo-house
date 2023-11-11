@@ -35,8 +35,8 @@ def update_tasks(db_path: str, updated_tasks: list[tuple[datetime.date, str]]) -
             conn.commit()
 
 
-def create_task_table() -> None:
-    with sqlite3.connect("tasks.db") as conn:
+def create_task_table(db_path: str) -> None:
+    with sqlite3.connect(db_path) as conn:
         with sqlite_cursor(conn) as cur:
             cur.execute("DROP TABLE IF EXISTS tasks")
             cur.execute("CREATE TABLE tasks(task_name, frequency_days, last_done)")
